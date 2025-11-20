@@ -18,14 +18,14 @@ The main phenotype dataset for this project is the `Pheno_ePTB_PAGE_postBetasNor
 # Base code for running methylation PCs (mPCs)
 
 Methylation PCs were calculated using the 10K most variable normalized betas. 
-
 The code for this analysis is: `mPCs_dataStructure_inspection_preEWAS.R` found in the `code` folder
+
 
 # EWAS of ePTB by sex
 
 Based on the distribution of mPCs, we identified that main variability in the first PC was driven by child sex. Thus, we decided to run the EWAS stratified by this variable. 
 
-Code for this analysis is the `Bacon-adj-topsites_EWAS_ePTB_cc-allCells_girls.R` and `Bacon-adj-topsites_EWAS_ePTB_cc-noEosinos_allCells_boys.R` found in the `code` folder. The code includes plotting of main findings (Manhattan, QQ-plot, Volcano)
+Code for this analysis is the `EWAS_ePTB_newborn_DNAm_cc-noEosinos_allCells_boys.R` and `EWAS_ePTB_newborn_DNAm_cc-allCells_girls.R` found in the `code` folder. The code includes plotting of main findings (Manhattan, QQ-plot, Volcano)
 
 Note: the analysis for boys excludes adjustment for Eosinophils, as these immune cells were strongly correlated with the `eptb_bin` exposure in this dataset.
 
