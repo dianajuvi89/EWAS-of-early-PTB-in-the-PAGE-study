@@ -1,46 +1,45 @@
-# EWAS-ePTB-Aim2-project
-Sharing code for EWAS-ePTB analyses Aim 2A
+# EWAS-ePTB-PAGE-study
 
+## Project Overview
 
-# Project Overview
-
-The PAGE study is a case control study of placental abruption and preterm birth based in lima, Peru. For Aim 2A of this NICHD grant, we want to characterize the DNA methylation profile of early preterm infants, compare signals obtained with those of the continuous exposure, gestational age at delivery, and conduct functional analyses.
+The Placental Abruption Genetic Epidemiology study, PAGE, is a case-control study of placental abruption and preterm birth based in Lima, Peru. For this project, we sought to characterize the saliva DNA methylation profile of early preterm newborns by conducting sex-stratified Epigenome-wide association analyses, performing differentially methylated region (DMR) analysis, and in silico functional exploration of main signals obtained in the EWAS.
    
 ## Research Question
    
-Does being born Early Preterm (< 32 gestational weeks) shapes differentially the methylome of newborn cases versus controls? What are the biological pathways most impacted by ePTB? are there sex-differences in these associations?
+Do infants born early preterm (< 34 gestational weeks) differ in their epigenetic profile from those born at term, and can these differences be observed when stratifying by sex? What are the sex-specific biological pathways most impacted by early PTB?
    
 ## Data Source
 
-The main phenotype dataset for this project is the `Pheno_ePTB_PAGE_postBetasNormalizat_n284_CellsComplete.csv` found in the `data` folder, which includes the exposure (`eptb_bin`), main covariates, and a complete list of predicted saliva cells (epithelial and immune cells) using EpiDISH (https://bioconductor.org/packages/devel/bioc/vignettes/EpiDISH/inst/doc/EpiDISH.html?utm_source=openai).
+The phenotypic dataset for this project is the `Phenotype_ePTB_PAGE_n284_share.csv` found in the `data` folder, which includes the exposure (`eptb_bin`), main covariates, batch variables (surrogate variables) and a complete list of predicted saliva cells (epithelial and immune cells) using EpiDISH (https://bioconductor.org/packages/devel/bioc/vignettes/EpiDISH/inst/doc/EpiDISH.html?utm_source=openai). Quality-controlled DNA methylation data obtained using the EPIC array is in the 'TO COMPLETE' file. 
 
 
-# Base code for running methylation PCs (mPCs)
+## Base code for running methylation PCs (mPCs)
 
-Methylation PCs were calculated using the 10K most variable normalized betas. 
-The code for this analysis is: `mPCs_dataStructure_inspection_preEWAS.R` found in the `code` folder
-
-
-# EWAS of ePTB by sex
-
-Based on the distribution of mPCs, we identified that main variability in the first PC was driven by child sex. Thus, we decided to run the EWAS stratified by this variable. 
-
-Code for this analysis is the `EWAS_ePTB_newborn_DNAm_cc-noEosinos_allCells_boys.R` and `EWAS_ePTB_newborn_DNAm_cc-allCells_girls.R` found in the `code` folder. The code includes plotting of main findings (Manhattan, QQ-plot, Volcano)
-
-Note: the analysis for boys excludes adjustment for Eosinophils, as these immune cells were strongly correlated with the `eptb_bin` exposure in this dataset.
+Methylation PCs were calculated using the 10K most variable normalized betas. The code for this analysis is: `mPCs_dataStructure_inspection_preEWAS.R` found in the `code` folder
 
 
-# Adjustment of EWASs using Bacon and Plots
+## EWAS of ePTB by sex
 
-This code conducts the adjustment of EWAS estimates (coef, se) using `bacon` and generates all plots based on bacon-corrected estimates. It also generates top sites derived from EWAS at p<`9.4e-08`
-
-The code is the `Bacon-adj-topsites_EWAS_ePTB_cc-allCells_girls.R` and `Bacon-adj-topsites_EWAS_ePTB_cc-noEosinos_allCells_boys.R` and can be found in the `code` folder
+Based on the distribution of mPCs, we identified that the main variability in the first PC was driven by infant sex. Thus, the main EWAS were stratified by this variable. The code for this analysis is the `TO-COMPLETE.R` found in the `code` folder. Results of the EWAS were further adjusted using bacon, and the code for this is 'TO-COMPLETE.R'. We visually summarized results using Manhattan plots, QQ-plots, and volcano plots.
 
 
+## Analysis workflow
+The data and code accompanying this project can be used in the following order, consistent with the order in which analyses were conducted:
 
-# Preliminary results
+   1. Calculating predicted cells from saliva DNAm using EpiDISH
+   2. Calculating DNA methylation PCs
+   3. EWAS of early PTB by sex (boys and girls separately)
+   4. Bacon adjustment of EWAS by sex
+   5. Differentially methylated regional analysis (DMRs) by sex using bacon-adjusted estimates
+   6. In silico functional exploration of main EWAS results by sex:
+         a. Genomic enrichment analysis
+         b. Enrichment for biological pathways using gProfiler
+         c. Look-up of main signals in other EWAS
+       
 
-All the results obtained in the main EWAS and after bacon adjustment will be stored in the `results` folder, including plots.
+## Results
+
+Results obtained from the sex-stratified EWAS of early PTB, summary plots, DMRs by sex, and results from the functional analysis can be found in the `results` folder.
 
 
 
