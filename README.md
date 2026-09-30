@@ -32,9 +32,9 @@ The data and code accompanying this project can be used in the following order, 
    4. Bacon adjustment of EWAS by sex
    5. Differentially methylated regional analysis (DMRs) by sex using bacon-adjusted estimates
    6. In silico functional exploration of main EWAS results by sex:
-         a. Genomic enrichment analysis
-         b. Enrichment for biological pathways using gProfiler
-         c. Look-up of main signals in other EWAS
+      a. Genomic enrichment analysis
+      b. Enrichment for biological pathways using gProfiler
+      c. Look-up of main signals in other EWAS
        
 
 ## Results
