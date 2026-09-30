@@ -1,8 +1,8 @@
-# EWAS-ePTB-PAGE-study
+# EWAS of early PTB by sex in the PAGE study
 
 ## Project Overview
 
-The Placental Abruption Genetic Epidemiology study, PAGE, is a case-control study of placental abruption and preterm birth based in Lima, Peru. For this project, we sought to characterize the saliva DNA methylation profile of early preterm newborns by conducting sex-stratified Epigenome-wide association analyses, performing differentially methylated region (DMR) analysis, and in silico functional exploration of main signals obtained in the EWAS.
+The Placental Abruption Genetic Epidemiology study, PAGE, is a case-control study of placental abruption and preterm birth based in Lima, Peru. For this project, we sought to characterize the saliva DNA methylation profile of early preterm newborns by conducting sex-stratified Epigenome-wide association analyses, performing differentially methylated region (DMR) analysis, and in silico functional exploration of the main signals obtained in the EWAS.
    
 ## Research Question
    
