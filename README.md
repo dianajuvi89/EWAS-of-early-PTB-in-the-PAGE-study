@@ -15,12 +15,12 @@ The phenotypic dataset for this project is the `Phenotype_ePTB_PAGE_n284_share.c
 
 ## Base code for running methylation PCs (mPCs)
 
-Methylation PCs were calculated using the 10K most variable normalized betas. The code for this analysis is: `mPCs_dataStructure_inspection_preEWAS.R` found in the `code` folder
+Methylation PCs were calculated using the 10K most variable normalized betas. The code for this analysis is: `2-mPCs_dataStructure_inspection_preEWAS.R` found in the `code` folder
 
 
 ## EWAS of ePTB by sex
 
-Based on the distribution of mPCs, we identified that the main variability in the first PC was driven by infant sex. Thus, the main EWAS were stratified by this variable. The code for this analysis is the `TO-COMPLETE.R` found in the `code` folder. Results of the EWAS were further adjusted using bacon, and the code for this is 'TO-COMPLETE.R'. We visually summarized results using Manhattan plots, QQ-plots, and volcano plots.
+Based on the distribution of mPCs, we identified that the main variability in the first PC was driven by infant sex. Thus, the main EWAS were stratified by this variable. The code for this analysis is the `3-EWAS-sex-stratified.R` found in the `code` folder. Results of the EWAS were further adjusted using bacon, and the code for this is `4-Bacon-adjustment.R`. We visually summarized results using Manhattan plots, QQ-plots, and volcano plots.
 
 
 ## Analysis workflow
