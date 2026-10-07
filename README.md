@@ -10,7 +10,7 @@ Do infants born early preterm (< 34 gestational weeks) differ in their epigeneti
    
 ## Data Source
 
-The phenotypic dataset for this project is the `Phenotype_ePTB_PAGE_n284_share.csv` found in the `data` folder, which includes the exposure (`eptb_bin`), main covariates, batch variables (surrogate variables) and a complete list of predicted saliva cells (epithelial and immune cells) using EpiDISH (https://bioconductor.org/packages/devel/bioc/vignettes/EpiDISH/inst/doc/EpiDISH.html?utm_source=openai). Quality-controlled DNA methylation data obtained using the EPIC array is in the 'TO COMPLETE' file. 
+The phenotypic dataset for this project, *Phenotype_ePTB_PAGE_n284_share.csv*, and quality-controlled DNA methylation data obtained using the EPIC array *TO COMPLETE* are available in the project's FigShare repository https://doi.org/10.6084/m9.figshare.34036587. The phenotypic data includes the exposure (`eptb_bin`), main covariates, batch variables (surrogate variables or SVs), and a complete list of predicted saliva cells (epithelial and immune cells) using EpiDISH (https://bioconductor.org/packages/devel/bioc/vignettes/EpiDISH/inst/doc/EpiDISH.html?utm_source=openai). 
 
 
 ## Base code for running methylation PCs (mPCs)
@@ -24,7 +24,7 @@ Based on the distribution of mPCs, we identified that the main variability in th
 
 
 ## Analysis workflow
-The data and code accompanying this project can be used in the following order, consistent with the order in which analyses were conducted:
+The data and code accompanying this project can be used in the following order:
 
    1. Calculating predicted cells from saliva DNAm using EpiDISH
    2. Calculating DNA methylation PCs
